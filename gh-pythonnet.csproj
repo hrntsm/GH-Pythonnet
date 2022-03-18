@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Version>1.0</Version>
+    <Title>gh-pythonnet</Title>
+    <Description>Description of gh-pythonnet</Description>
+    <TargetExt>.gha</TargetExt>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Grasshopper" Version="7.4.21078.1001" IncludeAssets="compile;build" />
+    <PackageReference Include="pythonnet" Version="3.0.0-preview2022-03-03" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition="$(Configuration) == 'Debug' AND $([MSBuild]::IsOSPlatform(Windows))">
+    <StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
+    <StartArguments></StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+</Project>
