@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <Version>1.0</Version>
-    <Title>gh-pythonnet</Title>
-    <Description>Description of gh-pythonnet</Description>
+    <Title>pythonhopper</Title>
+    <Description>Description of pythonhopper</Description>
     <TargetExt>.gha</TargetExt>
   </PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="Grasshopper" Version="7.4.21078.1001" IncludeAssets="compile;build" />
-    <PackageReference Include="pythonnet" Version="3.0.0-preview2022-03-03" />
+    <PackageReference Include="pythonnet" Version="3.0.0-preview2022-04-11" />
   </ItemGroup>
   
   <PropertyGroup Condition="$(Configuration) == 'Debug' AND $([MSBuild]::IsOSPlatform(Windows))">
@@ -18,4 +18,5 @@
     <StartArguments></StartArguments>
     <StartAction>Program</StartAction>
   </PropertyGroup>
+
 </Project>
